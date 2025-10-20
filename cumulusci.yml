@@ -1,0 +1,20 @@
+minimum_cumulusci_version: '3.0.0'
+project:
+    name: nzc-regresiontesting-cci
+    package:
+        name: nzc-regresiontesting-cci
+        api_version: '62.0'
+    git:
+        default_branch: main
+    source_format: sfdx
+
+tasks: {}
+
+flows: {}
+
+orgs:
+    scratch:
+        dev:
+            config_file: config/project-scratch-def.json
+            days: 30
+

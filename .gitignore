@@ -1,0 +1,33 @@
+# Python
+*.pyc
+__pycache__/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Salesforce
+.sfdx/
+.sf/
+*.dup
+
+# CumulusCI
+.cci/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local credentials and config
+.env
+.env.local
+local_settings.py
+
