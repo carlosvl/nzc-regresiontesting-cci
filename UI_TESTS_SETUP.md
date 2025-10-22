@@ -153,16 +153,16 @@ Once the browser issue is resolved, you'll have these commands available:
 
 ```bash
 # Run all UI tests (26 tests)
-cci task run robot_ui --org NZCGus
+cci task run robot_ui --org your-org-name
 
 # Run specific UI test suites
-cci task run robot_ui_contacts --org NZCGus
-cci task run robot_ui_accounts --org NZCGus
-cci task run robot_ui_opportunities --org NZCGus
-cci task run robot_ui_workflows --org NZCGus
+cci task run robot_ui_contacts --org your-org-name
+cci task run robot_ui_accounts --org your-org-name
+cci task run robot_ui_opportunities --org your-org-name
+cci task run robot_ui_workflows --org your-org-name
 
 # Run a single UI test
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/ui_contact_tests.robot --test "Create Contact Via UI" --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/ui_contact_tests.robot --test "Create Contact Via UI" --org your-org-name
 ```
 
 ## 🎯 What's in the UI Tests

@@ -43,7 +43,7 @@ This framework includes specialized tests for **Net Zero Cloud objects**:
 ### Net Zero Cloud Workflow Tests (Recommended Starting Point)
 ```bash
 # Run the complete NZC workflow test
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org your-org-name
 
 # This test creates:
 # 1. Account
@@ -55,32 +55,34 @@ cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_work
 
 ### Run All Tests
 ```bash
-cci task run robot --org NZCGus
+cci task run robot --org your-org-name
 ```
 
 ### Run Smoke Tests Only
 ```bash
-cci task run robot_smoke --org NZCGus
+cci task run robot_smoke --org your-org-name
 ```
 
 ### Run API Tests Only
 ```bash
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 ```
 
 ### Run UI Tests Only
 ```bash
-cci task run robot_ui --org NZCGus
+cci task run robot_ui --org your-org-name
 ```
+
+**Note**: Replace `your-org-name` with the alias of your connected org. Use `cci org list` to see available orgs.
 
 ### Run Specific Test Suite
 ```bash
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 ```
 
 ### Run Tests with Specific Tags
 ```bash
-cci task run robot --include critical --org NZCGus
+cci task run robot --include critical --org your-org-name
 ```
 
 ## Test Organization
@@ -138,7 +140,7 @@ The results directory contains:
 2. Import the resources file: `Resource    ../resources/nzc-regresiontesting-cci.robot`
 3. Add suite setup/teardown for browser tests
 4. Write test cases with appropriate tags
-5. Run tests: `cci task run robot --org NZCGus`
+5. Run tests: `cci task run robot --org your-org-name`
 
 ### Example Test Template
 
@@ -180,16 +182,25 @@ Your Test Name
 
 ### Org Connection Issues
 - Verify org connection: `cci org list`
-- Reconnect if needed: `cci org connect NZCGus`
-- Check org info: `cci org info NZCGus`
+- Reconnect if needed: `cci org connect your-org-name`
+- Check org info: `cci org info your-org-name`
 
 ### Test Failures
 - Check `robot/nzc-regresiontesting-cci/results/log.html` for detailed error logs
 - Review screenshots in the results directory
 - Run individual failing tests for easier debugging
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## Learn More
 
 - [CumulusCI Documentation](https://cumulusci.readthedocs.io/)
 - [Robot Framework Documentation](https://cumulusci.readthedocs.io/en/latest/robot.html)
 - [Robot Framework User Guide](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
+- [Net Zero Cloud Documentation](https://help.salesforce.com/s/articleView?id=sf.net_zero_cloud.htm)

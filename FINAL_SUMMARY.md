@@ -22,7 +22,7 @@ Successfully created and verified an end-to-end Net Zero Cloud test that:
 
 **Run Command**:
 ```bash
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org your-org-name
 ```
 
 ---
@@ -103,7 +103,7 @@ cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_work
 ### 1. Run Net Zero Cloud Test (Recommended First Test)
 ```bash
 cd /Users/carlosvillalpando/Documents/Github/nzc-regresiontesting-cci
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org your-org-name
 ```
 
 ### 2. View Results
@@ -113,12 +113,12 @@ open robot/nzc-regresiontesting-cci/results/report.html
 
 ### 3. Run All API Tests
 ```bash
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 ```
 
 ### 4. Run Smoke Tests
 ```bash
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 ```
 
 ---
@@ -168,19 +168,19 @@ During test development, we learned the actual field names and relationships:
 Run specific test subsets:
 ```bash
 # Net Zero Cloud tests only
-cci task run robot --include netzero --org NZCGus
+cci task run robot --include netzero --org your-org-name
 
 # Critical tests
-cci task run robot --include critical --org NZCGus
+cci task run robot --include critical --org your-org-name
 
 # Smoke tests
-cci task run robot --include smoke --org NZCGus
+cci task run robot --include smoke --org your-org-name
 
 # API tests
-cci task run robot --include api --org NZCGus
+cci task run robot --include api --org your-org-name
 
 # Specific objects
-cci task run robot --include account --org NZCGus
+cci task run robot --include account --org your-org-name
 ```
 
 ---
@@ -240,7 +240,7 @@ Your Net Zero Cloud regression testing framework is:
 
 **Start testing now**:
 ```bash
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org your-org-name
 ```
 
 🎉 **Congratulations! Your Net Zero Cloud testing framework is complete!** 🎉

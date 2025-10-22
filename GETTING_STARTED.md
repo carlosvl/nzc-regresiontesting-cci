@@ -10,16 +10,16 @@ Your CumulusCI Robot Framework regression testing suite for **Salesforce Net Zer
 
 ```bash
 # Run Net Zero Cloud workflow test (RECOMMENDED - tests NZC-specific objects)
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org your-org-name
 
 # Run smoke tests (fastest - 4 tests, API only)
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 
 # Run all API tests (8 tests, no browser required)
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 
 # Run all regression tests
-cci task run robot --org NZCGus
+cci task run robot --org your-org-name
 ```
 
 ## ✅ Test Results
@@ -65,34 +65,34 @@ robot/
 ### By Test Type
 ```bash
 # Smoke tests only (quick validation)
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 
 # API tests only (no browser)
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 
 # UI tests only (requires Chrome & ChromeDriver)
-cci task run robot_ui --org NZCGus
+cci task run robot_ui --org your-org-name
 ```
 
 ### By Tag
 ```bash
 # Critical tests only
-cci task run robot --include critical --org NZCGus
+cci task run robot --include critical --org your-org-name
 
 # Smoke tests
-cci task run robot --include smoke --org NZCGus
+cci task run robot --include smoke --org your-org-name
 
 # Account tests
-cci task run robot --include account --org NZCGus
+cci task run robot --include account --org your-org-name
 
 # Opportunity tests
-cci task run robot --include opportunity --org NZCGus
+cci task run robot --include opportunity --org your-org-name
 ```
 
 ### Specific Test Suite
 ```bash
 # Run specific file
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/account_regression.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/account_regression.robot --org your-org-name
 ```
 
 ## 🏷️ Test Tags
@@ -147,7 +147,7 @@ UI tests require Chrome and ChromeDriver. To run them:
 
 3. **Run UI tests**:
    ```bash
-   cci task run robot_ui --org NZCGus
+   cci task run robot_ui --org your-org-name
    ```
 
 ## 🎯 Next Steps
@@ -175,12 +175,12 @@ UI tests require Chrome and ChromeDriver. To run them:
 
 ### Check Org Connection
 ```bash
-cci org info NZCGus
+cci org info your-org-name
 ```
 
 ### Run Single Test for Debugging
 ```bash
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --test "Org Connection Test" --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --test "Org Connection Test" --org your-org-name
 ```
 
 ### View Detailed Logs
@@ -193,7 +193,7 @@ open robot/nzc-regresiontesting-cci/results/log.html
 You're all set! Start by running the smoke tests:
 
 ```bash
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 ```
 
 Happy testing! 🚀

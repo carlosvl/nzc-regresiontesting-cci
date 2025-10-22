@@ -43,16 +43,16 @@ Your CumulusCI Robot Framework regression testing suite for **Salesforce Net Zer
 
 ```bash
 # Run Net Zero Cloud workflow test (RECOMMENDED STARTING POINT)
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/nzc_simple_workflow.robot --org your-org-name
 
 # Run all API tests (fastest, most reliable)
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 
 # Run smoke tests (quick validation)
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 
 # Run all tests
-cci task run robot --org NZCGus
+cci task run robot --org your-org-name
 
 # View results
 open robot/nzc-regresiontesting-cci/results/report.html
@@ -112,17 +112,17 @@ Filter tests easily:
 
 ```bash
 # By type
-cci task run robot --include api --org NZCGus
-cci task run robot --include ui --org NZCGus
+cci task run robot --include api --org your-org-name
+cci task run robot --include ui --org your-org-name
 
 # By priority
-cci task run robot --include smoke --org NZCGus
-cci task run robot --include critical --org NZCGus
+cci task run robot --include smoke --org your-org-name
+cci task run robot --include critical --org your-org-name
 
 # By object
-cci task run robot --include account --org NZCGus
-cci task run robot --include opportunity --org NZCGus
-cci task run robot --include contact --org NZCGus
+cci task run robot --include account --org your-org-name
+cci task run robot --include opportunity --org your-org-name
+cci task run robot --include contact --org your-org-name
 ```
 
 ## 📚 Documentation Files
@@ -139,10 +139,10 @@ cci task run robot --include contact --org NZCGus
 
 ```bash
 # 1. Run smoke tests first (fastest validation)
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 
 # 2. Run all API tests
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 
 # 3. View results
 open robot/nzc-regresiontesting-cci/results/report.html
@@ -217,7 +217,7 @@ Your regression testing framework is production-ready and provides:
 
 **Start testing now:**
 ```bash
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 ```
 
 Happy testing! 🚀

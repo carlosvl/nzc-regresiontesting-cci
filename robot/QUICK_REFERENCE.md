@@ -5,30 +5,30 @@
 ### Basic Commands
 ```bash
 # Run all tests
-cci task run robot --org NZCGus
+cci task run robot --org your-org-name
 
 # Run smoke tests only
-cci task run robot_smoke --org NZCGus
+cci task run robot_smoke --org your-org-name
 
 # Run API tests only
-cci task run robot_api --org NZCGus
+cci task run robot_api --org your-org-name
 
 # Run UI tests only
-cci task run robot_ui --org NZCGus
+cci task run robot_ui --org your-org-name
 
 # Run specific test file
-cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org NZCGus
+cci task run robot --suites robot/nzc-regresiontesting-cci/tests/smoke_tests.robot --org your-org-name
 
 # Run tests with specific tag
-cci task run robot --include smoke --org NZCGus
-cci task run robot --include critical --org NZCGus
-cci task run robot --include api,smoke --org NZCGus
+cci task run robot --include smoke --org your-org-name
+cci task run robot --include critical --org your-org-name
+cci task run robot --include api,smoke --org your-org-name
 
 # Exclude certain tests
-cci task run robot --exclude destructive --org NZCGus
+cci task run robot --exclude destructive --org your-org-name
 
 # Run with debug output
-cci task run robot --org NZCGus --debug
+cci task run robot --org your-org-name --debug
 ```
 
 ## Common Robot Framework Keywords
@@ -242,7 +242,7 @@ cat robot/nzc-regresiontesting-cci/results/output.xml
 
 ### Run with Debug
 ```bash
-cci task run robot --org NZCGus --debug
+cci task run robot --org your-org-name --debug
 ```
 
 ### Add Debug Output in Tests
@@ -330,10 +330,10 @@ chromedriver --version
 cci org list
 
 # Check org info
-cci org info NZCGus
+cci org info your-org-name
 
 # Reconnect org
-cci org connect NZCGus
+cci org connect your-org-name
 ```
 
 ### Test Failures
