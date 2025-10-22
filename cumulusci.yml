@@ -8,7 +8,71 @@ project:
         default_branch: main
     source_format: sfdx
 
-tasks: {}
+tasks:
+    robot:
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+
+    robot_smoke:
+        description: Run smoke tests only
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests
+            include: smoke
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+
+    robot_api:
+        description: Run API tests only
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests
+            include: api
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+
+    robot_ui:
+        description: Run UI tests only
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests
+            include: ui
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+    
+    robot_ui_contacts:
+        description: Run UI tests for Contacts
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests/ui_contact_tests.robot
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+    
+    robot_ui_accounts:
+        description: Run UI tests for Accounts
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests/ui_account_tests.robot
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+    
+    robot_ui_opportunities:
+        description: Run UI tests for Opportunities
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests/ui_opportunity_tests.robot
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
+    
+    robot_ui_workflows:
+        description: Run end-to-end UI workflow tests
+        class_path: cumulusci.tasks.robotframework.Robot
+        options:
+            suites: robot/nzc-regresiontesting-cci/tests/ui_workflow_tests.robot
+            options:
+                outputdir: robot/nzc-regresiontesting-cci/results
 
 flows: {}
 
